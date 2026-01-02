@@ -1,4 +1,5 @@
 buildscript {
+    // We update Kotlin to match the AI plugins
     ext.kotlin_version = '1.9.0'
     repositories {
         google()
