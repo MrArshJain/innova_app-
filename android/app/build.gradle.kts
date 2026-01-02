@@ -23,7 +23,9 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.example.innova_ultimate"
+    // WE REMOVED THE HARDCODED NAMESPACE TO PREVENT ERRORS
+    // namespace "com.example.innova_ultimate" <--- REMOVED
+    
     compileSdkVersion 34
     ndkVersion flutter.ndkVersion
 
@@ -41,8 +43,9 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.innova_ultimate"
-        // --- CRITICAL FIXES BELOW ---
+        // This allows it to read the ID from your AndroidManifest.xml
+        applicationId "com.example.innova_memory" 
+        
         minSdkVersion 23
         targetSdkVersion 34
         versionCode flutterVersionCode.toInteger()
