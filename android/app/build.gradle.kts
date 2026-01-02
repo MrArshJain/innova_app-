@@ -41,17 +41,13 @@ android {
     }
 
     defaultConfig {
-        // This is the App ID
         applicationId "com.example.innova_ultimate"
-        
-        // --- THIS IS THE FIX ---
-        // We changed these numbers to support AI & Flashlight
+        // --- THE FIX IS HERE (23) ---
         minSdkVersion 23
         targetSdkVersion 34
-        // -----------------------
-        
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        multiDexEnabled true 
     }
 
     buildTypes {
@@ -66,4 +62,5 @@ flutter {
 }
 
 dependencies {
+    implementation 'androidx.multidex:multidex:2.0.1' 
 }
