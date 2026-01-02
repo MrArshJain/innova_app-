@@ -27,6 +27,9 @@ jobs:
     - name: Get Dependencies
       run: flutter pub get
 
+    - name: Fix Android Permissions (The Fix)
+      run: chmod +x android/gradlew
+
     - name: Build APK
       run: flutter build apk --release --no-tree-shake-icons
 
