@@ -1,0 +1,30 @@
+name: innova_ultimate
+description: The Final Innova Assistant.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Voice & AI
+  speech_to_text: ^6.6.0
+  flutter_tts: ^3.8.3
+  
+  # System Control
+  url_launcher: ^6.2.0
+  permission_handler: ^11.0.0
+  external_app_launcher: ^3.1.0
+  flutter_contacts: ^1.1.7
+  wakelock_plus: ^1.1.0
+  android_intent_plus: ^4.0.0
+  battery_plus: ^6.0.3
+  torch_light: ^1.0.2
+  
+  # Memory Storage
+  shared_preferences: ^2.2.2
+
+flutter:
+  uses-material-design: true
