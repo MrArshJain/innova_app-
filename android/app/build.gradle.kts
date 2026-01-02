@@ -4,27 +4,9 @@ plugins {
     id "dev.flutter.flutter-gradle-plugin"
 }
 
-def localProperties = new Properties()
-def localPropertiesFile = rootProject.file('local.properties')
-if (localPropertiesFile.exists()) {
-    localPropertiesFile.withReader('UTF-8') { reader ->
-        localProperties.load(reader)
-    }
-}
-
-def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
-if (flutterVersionCode == null) {
-    flutterVersionCode = '1'
-}
-
-def flutterVersionName = localProperties.getProperty('flutter.versionName')
-if (flutterVersionName == null) {
-    flutterVersionName = '1.0'
-}
-
 android {
-    // WE REMOVED THE HARDCODED NAMESPACE TO PREVENT ERRORS
-    // namespace "com.example.innova_ultimate" <--- REMOVED
+    // We removed the 'namespace' line. 
+    // It will now use the package name from AndroidManifest.xml
     
     compileSdkVersion 34
     ndkVersion flutter.ndkVersion
@@ -43,13 +25,13 @@ android {
     }
 
     defaultConfig {
-        // This allows it to read the ID from your AndroidManifest.xml
-        applicationId "com.example.innova_memory" 
+        // We removed 'applicationId'. 
+        // It will now use the package name from AndroidManifest.xml
         
         minSdkVersion 23
         targetSdkVersion 34
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
+        versionCode 1
+        versionName "1.0"
         multiDexEnabled true 
     }
 
